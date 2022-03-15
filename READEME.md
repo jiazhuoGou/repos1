@@ -109,6 +109,7 @@ A person's change often requires an opportunity.
 			}
 		]
 	}
+	${workspaceFolder}\\*.cpp
 
 ## step3(Ctrl+Shift+B 编译)
 

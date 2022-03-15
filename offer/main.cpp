@@ -55,7 +55,7 @@ int main(void)
      * @brief 剑指offer 05
      * 
      */
-    string s = "L T  c";
+    string s = "L T  ca";
     cout << solution.replaceSpace(s) << endl;
     
 
