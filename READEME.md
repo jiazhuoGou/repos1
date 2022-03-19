@@ -50,7 +50,24 @@ The tree always asks for nothing in return and helps him.
 ### 第四部分section 1，4个问题
 
 ### 34页，section3的group discussion
-A person's change often requires an opportunity.
+First of all, what I value most is whether a person is positive and optimistic，
+Of course, everyone has times when they feel down, but it should come out in time, not indulge in it
+So I also prefer to make friends with people who like sports, their living conditions are better and they can improve each other
+
+### 38页， 2 1
+That is not actively involved in the team,still alone
+
+I've always been an optimist，One thing is definitely not going well all the time.
+So I'm well prepared to meet these challenges.
+I think that's the meaning of life
+Which is to constantly challenge yourself and actively face the future.
+Results are less important than your growth.
+Finally, let me share with you
+Romain Rolland said There is only one heroism in the world: to see the world as it is and to love it.Isn't the way to climb up more exciting than standing at the top?
+
+I want to work with people who are proactive,
+Because these people are more energetic
+So we can make progress with each other
 
 
 # vscode编译cpp文件

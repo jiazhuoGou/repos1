@@ -97,3 +97,36 @@
         }
         return s;
     }
+
+    /**
+     * @brief 逆转链表，两个指针
+     * 时间复杂度O(n), 空间复杂度O(1)
+     * @param head 
+     * @return vector<int> 
+     */
+    vector<int> Solution::reversePrint(ListNode* head) {
+        vector<int> V;
+        if (head == NULL) 
+            return V;
+        cout << "start" << endl;
+        ListNode *p1 = head->next, *p2 = NULL, *p = head;
+        head->next = NULL;
+        while (p1)
+        {
+            p2 = p1->next;  //  记住下一个
+            p1->next = p;   // 逆序
+            // 递推
+            p = p1;
+            p1 = p2;
+        }
+        while(p) 
+        {
+            V.push_back(p->val);
+            p = p->next;
+        }
+        for(auto v : V)
+        {
+            cout << v << " ";
+        }
+        return V;
+    }

@@ -10,6 +10,15 @@
 
 using namespace std;
 
+/**
+     * Definition for singly-linked list.
+     * */
+    struct ListNode {
+        int val;
+        ListNode *next;
+        ListNode(int x) : val(x), next(NULL) {} // 这个相当于构造函数，只是初创的时候调用，做这个题不管
+    };
+
 class Solution {
 public:
     /**
@@ -48,6 +57,8 @@ public:
      * @return string 
      */
     string replaceSpace(string s);
+
+    vector<int> reversePrint(ListNode* head);
 };
 
 #endif
