@@ -19,6 +19,13 @@ using namespace std;
         ListNode(int x) : val(x), next(NULL) {} // 这个相当于构造函数，只是初创的时候调用，做这个题不管
     };
 
+    struct TreeNode {
+        int val;
+        TreeNode *left;
+        TreeNode *right;
+        TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    };
+
 class Solution {
 public:
     /**
@@ -58,7 +65,22 @@ public:
      */
     string replaceSpace(string s);
 
+    /**
+     * @brief 逆序链表
+     * 
+     * @param head 表头
+     * @return vector<int> 
+     */
     vector<int> reversePrint(ListNode* head);
+    
+    /**
+     * @brief 根据前序和中序遍历，还原二叉树
+     * 
+     * @param preorder 前序遍历
+     * @param inorder   中序遍历
+     * @return TreeNode* 
+     */
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder);
 };
 
 #endif
