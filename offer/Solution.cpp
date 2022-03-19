@@ -124,9 +124,5 @@
             V.push_back(p->val);
             p = p->next;
         }
-        for(auto v : V)
-        {
-            cout << v << " ";
-        }
         return V;
     }

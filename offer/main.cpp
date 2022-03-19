@@ -59,6 +59,15 @@ int main(void)
     cout << solution.replaceSpace(s) << endl;
     */
 
+    /**
+        * @brief 剑指offer 06
+        * 
+        */
+    struct ListNode n1(1);struct ListNode *p1 = &n1;
+    struct ListNode n2(2);struct ListNode *p2 = &n2;
+    struct ListNode n3(3);struct ListNode *p3 = &n3;
+    struct ListNode n4(4);struct ListNode *p4 = &n4;
+    
 
     return 0;
 }
