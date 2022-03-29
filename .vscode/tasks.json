@@ -8,7 +8,7 @@
 			"args": [
 				"-fdiagnostics-color=always",
 				"-g",
-				"${workspaceFolder}\\offer\\*.cpp",
+				"${workspaceFolder}\\repos1\\offer\\*.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
