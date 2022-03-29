@@ -146,5 +146,6 @@
         int div;
         for(div = 0; inorder[div] != root->val; div++); // 0~div为根节点左边,div+1开始为右边
         
-
+        TreeNode *ret = new TreeNode(0);
+        return ret;
     }
