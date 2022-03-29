@@ -67,7 +67,7 @@ int main(void)
     vector<int> inorder{9, 3, 15, 20, 7};
     solution.buildTree(preorder, inorder);
 
-    cout << "aloha" << endl;
+    cout << "aloha world haha" << endl;
 
 
     return 0;
