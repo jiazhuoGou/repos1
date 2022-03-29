@@ -7,6 +7,7 @@
 			"command": "E:\\mingw\\bin\\g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
+				"-Wall",
 				"-g",
 				"${workspaceFolder}\\offer\\*.cpp",
 				"-o",
