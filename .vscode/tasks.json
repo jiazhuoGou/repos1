@@ -7,7 +7,6 @@
 			"command": "E:\\mingw\\bin\\g++.exe",
 			"args": [
 				"-Wall",
-				"-g",
 				"-std=c++17",
 				"${workspaceFolder}\\offer\\*.cpp",
 				"-o",
