@@ -68,6 +68,7 @@ int main(void)
     solution.buildTree(preorder, inorder);
 
     cout << "aloha world haha" << endl;
+    cout << "实验室测试" << endl;
 
 
     return 0;
