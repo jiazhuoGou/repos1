@@ -11,7 +11,7 @@
 
 int main(void)
 {
-
+    cout << "zenme  hahaha  shiyanshiceshi" << endl;
     Solution solution;
     /* 剑指offer 03
     vector<int> nums{2, 3, 1, 0, 2, 5, 3};
@@ -68,6 +68,7 @@ int main(void)
     solution.buildTree(preorder, inorder);
 
     cout << "aloha world haha" << endl;
+    system("pause");
 
 
     return 0;

@@ -139,6 +139,7 @@
         if (preorder[0] == -1 || inorder[0] == -1)
         {   // 前提保证
             TreeNode *root = new TreeNode(-1);
+            return root;
         }
         // 首先前序遍历的第一个一定是根节点
         TreeNode *root = new TreeNode(preorder[0]);
