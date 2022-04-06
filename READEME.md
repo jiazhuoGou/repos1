@@ -88,6 +88,19 @@ Never put off till tomorrow what you can do today.
 1. Keep a good mood: a good mood is the first step and the foundation of a happy life. When it's sunny, you should tell yourself: what a nice day; When it rains, you should say: what a beautiful rain scene. When you can have a good mood for all things in life, happiness is not far from you.
 2. Have a positive attitude: there will always be some difficulties in life, but we should face them positively and find ways to solve them. Retreat will only make more and more difficulties. How can you feel happy when many difficulties are on you? At the same time, the process of solving difficulties is also the process of obtaining happiness.
 
+## Unit5
+### p111，section 1
+
+### p.113，section1 2
+I think it's a powerful computer for example, sometimes I will carry out mathematical modeling, run a lot of simulation programs, 
+and do some machine learning.I can also play games and watch videos during my usual rest.
+If I have a lot of money, I will pay the tuition first.Then buy some gifts for your parents, and the other money will be used as the living expenses of your postgraduate study.
+
+## Unit5
+### section 1 143 2 2
+The most important thing in education is to teach us how to apply this knowledge. The fundamental purpose of learning knowledge is to change yourself and change the world. Applying what you have learned is the most important thing.Because we will always leave the campus and enter the society one day, we need to use the knowledge we have learned flexibly to solve problems and make our lives happier. Of course, if you are very capable, you can lead the trend and change the world.
+
+
 # vscode编译cpp文件
 ## step1(新建文件夹)
 	首先新建文件夹，当作你的工作区，这里是./offer
