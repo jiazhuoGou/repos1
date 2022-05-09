@@ -10,14 +10,6 @@
 
 using namespace std;
 
-/**
-     * Definition for singly-linked list.
-     * */
-    struct ListNode {
-        int val;
-        ListNode *next;
-        ListNode(int x) : val(x), next(NULL) {} // 这个相当于构造函数，只是初创的时候调用，做这个题不管
-    };
 
     struct TreeNode {
         int val;
@@ -25,6 +17,15 @@ using namespace std;
         TreeNode *right;
         TreeNode(int x) : val(x), left(NULL), right(NULL) {}
     };
+
+    struct ListNode {
+            int val;
+            ListNode *next;
+            ListNode() : val(0), next(nullptr) {}
+            ListNode(int x) : val(x), next(nullptr) {}
+            ListNode(int x, ListNode *next) : val(x), next(next) {}
+    };
+    
 
 class Solution {
 public:
@@ -81,6 +82,13 @@ public:
      * @return TreeNode* 
      */
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder);
+
+    /**
+    * @lc app=leetcode.cn id=2 lang=cpp
+    *
+    * [2] 两数相加
+    */
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2); 
 };
 
 #endif

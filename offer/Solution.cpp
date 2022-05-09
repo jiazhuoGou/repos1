@@ -104,6 +104,7 @@
      * @param head 
      * @return vector<int> 
      */
+    /*
     vector<int> Solution::reversePrint(ListNode* head) {
         vector<int> V;
         if (head == NULL) 
@@ -125,7 +126,7 @@
             p = p->next;
         }
         return V;
-    }
+    }*/
 
     /**
      * @brief 根据前序和中序遍历，还原二叉树
