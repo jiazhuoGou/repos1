@@ -2,27 +2,50 @@
 #include<vector>
 #include<string>
 #include<typeinfo>
+#include<array>
+#include<algorithm>
+#include<cassert>
+
 
 #include "../include/Circle.h"
+#include "../include/Employee.h"
+#include "../include/Date.h"
 
 using namespace std;
 
+void print(array<int, 5> &arr);
+constexpr int factorial(int n)
+{
+	if (n == 0)
+	{
+		return 1;	// error
+	}
+	else
+	{
+		return n * factorial(n-1);
+	}
+	
+}
+
+int Employee::numberOfObjects = 0;
+
 int main(void)
 {
+	cout << "alohaworld" << endl;
 	auto c1 = Circle{2.3};	//	用匿名对象做拷贝列表初始化
 	Circle c2{3.2};	// 直接列表初始化
 
 	Circle c3{};	// 直接列表初始化，调用默认构造函数
 	c3 = Circle{4.5};	// 用匿名对象赋值
 
-	cout << "哈哈啊咯" << c3.getArea() << endl;
-	cout << c1.getArea() << endl;
-	cout << Circle{12}.getArea() << endl;
+	//cout << "哈哈啊咯" << c3.getArea() << endl;
+	//cout << c1.getArea() << endl;
+	//cout << Circle{12}.getArea() << endl;
 
 	Circle *p3 = &c3;
-	cout << "用指针 " << p3->getArea() << endl; 
+	//cout << "用指针 " << p3->getArea() << endl; 
 	Circle *pObj = new Circle{100.1};
-	cout << "用new创建对象 " << pObj->getArea() << endl; 
+	//cout << "用new创建对象 " << pObj->getArea() << endl; 
 	
 	delete pObj;
 	
@@ -34,7 +57,7 @@ int main(void)
 	Circle C1[] {1.1, 1.2, 1.3};
 	for(auto c1 : C1)
 	{
-		cout << c1.getArea() << endl;
+		//cout << c1.getArea() << endl;
 	}
 
 	/**
@@ -45,7 +68,7 @@ int main(void)
 	c1.print(C[1]);
 	c1.print(&C[1]);
 	c1.setRadius(C[2].getRadisu());
-	cout << c1.getRadisu() << endl;
+	//cout << c1.getRadisu() << endl;
 
 	// string类
 	string s{"hello"};
@@ -57,9 +80,69 @@ int main(void)
 	s += "1";
 	cout << s << endl;
 	string str{"1234"};
-	cout << typeid(123).name() << endl;
-	cout << typeid(std::stoi(str)).name() << endl;
+	int x = stoi(str);
+	cout << typeid(x).name() << endl;
+	array<int, 5> arr {2,3,7,9,100};
+	array arr2{99,7,26,13,12};
+	array a2{'a', 'b', 'c'};
+	cout << typeid(arr).name() << endl;
+	cout << typeid(a2).name() << endl;
+	//cout << abi::__cxa_demangle(typeid(a2).name(), NULL, NULL, NULL)<<endl;	// 显示正常的类型名
+	// 交换两个数组
+	arr.swap(arr2);	// 2个数组的值被交换
+	print(arr);
+	print(arr2);
+	// 求数组大小
+	cout << arr.size() << endl;
+	cout << arr.max_size() << endl;
+	sort(arr.begin(), arr.end());
+	print(arr);
 
-	system("pause");
+	// 断言测试
+	// 用递归计算factorial，用assert检查3的阶乘
+	int f = factorial(3);
+	cout << "阶乘: " << f << endl;
+
+	// 将factorial变成常量表达式，用static_assert检查3的阶乘
+	static_assert(factorial(3) == 6, "should be 6" );
+	
+	// 创建factorial(4)大小的数组
+	array<int, factorial(4)> a;
+	cout << a.size() << endl;
+
+	// 不可变对象
+	/*
+	Employee e;
+	e.setBirthday(Date(1999, 1, 1));
+	cout << e.toString() << endl;
+	e.getBirthday()->setYear(1998);
+	cout << e.toString() << endl;*/
+
+	// 析构函数
+	cout << "----------析构函数--------" << endl;
+	Employee e1;
+	cout << e1.toString() << endl;
+	Employee *e2 = new Employee("john", Gender::male, Date(1990, 3, 2));
+	cout << e2->toString() << endl;
+	
+	{
+		Employee *e3 = new Employee("alice", Gender::famale, Date(1980, 4, 2));	//	这个作用域之后，e3并没有被消除？是因为在堆上要手动删吗
+		Employee e4{"tom", Gender::famale, Date(2010, 4, 1)};	// 看来是这样的，根据打印信息, 这个e4是在栈上，出了这个域就被删了
+		delete e3;	//	同时如果要删除e3，也要在该作用域内
+	}
+	delete e2;
+
+
+	//system("pause");
 	return 0;
 }
+
+void print(array<int, 5> &arr)
+{
+	for(auto it = arr.begin(); it != arr.end(); it++)
+	{
+		cout << *it << " ";
+	}
+	cout << "\n";
+}
+

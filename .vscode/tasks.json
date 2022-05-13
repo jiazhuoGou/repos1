@@ -10,7 +10,7 @@
 				"-Wall",
 				"-fdiagnostics-color=always",
 				"-g",
-				"${fileDirname}\\*.CPP",
+				"${workspaceFolder}\\CPPSTUDY\\src\\*.CPP",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
