@@ -120,8 +120,10 @@ int main(void)
 
 	// 析构函数
 	cout << "----------析构函数--------" << endl;
-	Employee e1;
-	cout << e1.toString() << endl;
+	{
+		Employee e1;
+		cout << e1.toString() << endl;
+	}
 	Employee *e2 = new Employee("john", Gender::male, Date(1990, 3, 2));
 	cout << e2->toString() << endl;
 	
@@ -131,6 +133,22 @@ int main(void)
 		delete e3;	//	同时如果要删除e3，也要在该作用域内
 	}
 	delete e2;
+	cout << "\n";
+
+	// 深拷贝
+	//cout << "----------深拷贝--------" << endl;
+	cout << "----------deep copy--------" << endl;
+	Employee e1{"Alex", Gender::male, {1998, 5, 1}};
+	Employee e3{e1};
+	cout << e1.toString() << endl;
+	cout << e3.toString() << endl;
+	cout <<  "after add copy functoin" << endl;
+	Employee e4{e1};	// 生日对象是2个对象了，不在共用
+	cout << e4.toString() << endl;
+	cout << "\n";
+
+	//cout << "----------vector--------" << endl;
+	
 
 
 	//system("pause");

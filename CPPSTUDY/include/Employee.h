@@ -17,6 +17,7 @@ private:
     static int numberOfObjects;
 public:
     Employee();
+    Employee(const Employee &e);
     Employee(std::string name, Gender gender, Date birthday);
     void setName(std::string name);
     std::string getName();

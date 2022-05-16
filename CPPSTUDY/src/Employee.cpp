@@ -16,6 +16,14 @@ Employee::Employee(std::string name, Gender gender, Date birthday)
     cout << "Now there are : " << numberOfObjects << " employees" << endl;
 }
 
+Employee::Employee(const Employee &e)
+{
+    this->birthday = new Date{*(e.birthday)};
+    this->name = e.name;
+    this->gender = e.gender;
+    numberOfObjects++;
+}
+
 
     
 void Employee::setName(std::string name)
