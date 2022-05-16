@@ -10,6 +10,7 @@
 #include "../include/Circle.h"
 #include "../include/Employee.h"
 #include "../include/Date.h"
+#include "../include/Helper.h"
 
 using namespace std;
 
@@ -147,13 +148,21 @@ int main(void)
 	cout << e4.toString() << endl;
 	cout << "\n";
 
-	//cout << "----------vector--------" << endl;
-	
+	cout << "----------vector--------" << endl;
+	vector words1{"aloha", "world", "welcom!"};
+	PRINT(words1);
+	words1.erase(words1.end()-1);	//	删除最后一个元素
+	PRINT(words1);
+	words1.push_back("cqupt");
+	PRINT(words1);
+	vector<string> words2 {words1.begin()+1, words1.end()};
+	PRINT(words2);
 
 
 	//system("pause");
 	return 0;
 }
+
 
 void print(array<int, 5> &arr)
 {
