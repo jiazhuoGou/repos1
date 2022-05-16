@@ -1,10 +1,13 @@
-#pragma once
-class Circle
+# pragma once
+
+#include"./Shape.h"
+
+class Circle : public Shape
 {
 private:
 	double radius_;
 public:	
-	Circle(double r);
+	Circle(double radius, Color color_, bool filled_);
 	Circle();
 	void setRadius(double radius);
 	double getRadisu();

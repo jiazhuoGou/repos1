@@ -3,9 +3,11 @@
 
 using namespace std;
 
-Circle::Circle(double r)
+Circle::Circle(double radius, Color color_, bool filled_)
+: Shape{color_, filled_}
 {
-	radius_ = r;
+	this->radius_ = radius;
+
 }
 
 Circle::Circle()
