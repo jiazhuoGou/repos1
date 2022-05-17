@@ -39,3 +39,10 @@ void Circle::print(Circle *c)
 {
 	cout << "用指针传值："  << c->getArea() << endl;
 }
+
+string Circle::toString()
+{
+	return ( "circle: radius " + std::to_string(radius_) + ", "
+	+ colorToString() + " " + filledToString() );
+	
+}

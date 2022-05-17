@@ -15,7 +15,8 @@ public:
     void    setWidth(double width_);
     double  getHeight() const;
     void    setHeight(double height_);
-    double  getArea() const;    
+    double  getArea() override;    
+    string  toString() override;
 
     ~Rectangle();
 };

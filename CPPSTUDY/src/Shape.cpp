@@ -31,10 +31,19 @@ void Shape::setFilled(bool Filled_)
 
 string Shape::toString()
 {
-    std::array<string, 6> c{"white"s, "black"s, "red"s, "green"s, "blue"s, "yellow"s};
-    return "Shape: " + c[static_cast<int>(color)] + " " 
-    + (filled?"filled"s:"not filled");
+    return "Shape : " + colorToString() + " " + filledToString();
 }
+
+string Shape::colorToString()
+{
+    return colorNames[static_cast<int>(color)];
+}
+
+string Shape::filledToString()
+{
+    return (filled?"filled"s:"not filled");
+}
+
 
 Shape::~Shape()
 {

@@ -11,9 +11,10 @@ public:
 	Circle();
 	void setRadius(double radius);
 	double getRadisu();
-	double getArea();
+	double getArea() override;
 	//void print(Circle c);
 	void print(Circle &c);
 	void print(Circle *c);
+	string toString() override;
 
 };

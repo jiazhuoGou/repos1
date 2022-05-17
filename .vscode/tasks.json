@@ -7,6 +7,8 @@
 			"command": "E:\\mingw\\bin\\g++.exe",
 			"args": [
 				"-std=c++17",
+				"-lc++fs",
+				"-lstdc++fs",
 				"-Wall",
 				"-fdiagnostics-color=always",
 				"-g",

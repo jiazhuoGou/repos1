@@ -5,6 +5,7 @@
 #include<array>
 #include<algorithm>
 #include<cassert>
+#include<filesystem>
 
 
 #include "../include/Circle.h"
@@ -15,6 +16,8 @@
 #include "../include/Shape.h"
 
 using namespace std;
+
+//namespace fs = filesystem;
 
 void print(array<int, 5> &arr);
 constexpr int factorial(int n)
@@ -34,6 +37,7 @@ int Employee::numberOfObjects = 0;
 
 int main(void)
 {
+	namespace fs = std::filesystem;
 	cout << "alohaworld" << endl;
 	//auto c1 = Circle{2.3};	//	用匿名对象做拷贝列表初始化
 	//Circle c2{3.2};	// 直接列表初始化
@@ -163,15 +167,19 @@ int main(void)
 
 
 	cout << "----------Inherit--------" << endl;
-	Shape s1{Color::blue, false};
+	//Shape s1{Color::blue, false};
 	Circle c4{3.9, Color::green, true};
 	Rectangle r1{4.0, 1.0, Color::white, true};
 
-	cout << s1.toString() << endl;
+	//cout << s1.toString() << endl;
 	cout << c4.toString() << endl;
 	cout << r1.toString() << endl;
+	cout << r1.getArea()  << endl;
 
-
+	Shape *shape = &c4;	//	向上转型，子类重写过父类的虚函数，该调用子类重写的
+	cout << shape->toString() << endl;
+	cout << typeid(Shape).name() << endl;
+	
 	//system("pause");
 	return 0;
 }

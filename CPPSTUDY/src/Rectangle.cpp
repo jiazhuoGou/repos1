@@ -27,9 +27,16 @@ void Rectangle::setHeight(double height_)
     height = height_;
 }
 
-double Rectangle::getArea() const
+double Rectangle::getArea() 
 {
     return width * height;
+}
+
+string  Rectangle::toString()
+{
+    return ( "Rectangle: width " + std::to_string(width) + ", "
+    + "height: " + std::to_string(height) + ", "
+    + colorToString() + " " + filledToString() );
 }
 
 Rectangle::~Rectangle()
